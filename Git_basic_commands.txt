@@ -1,0 +1,72 @@
+Visual Studio  (команды Git)
+git pull - чтобы автоматически получить изменения из удалённой ветки и слить их со своей текущей
+git status - смотрим статус
+git -h - список команд
+git add - помечаем файлы для добавления в коммит (можно всю папку например "git add .")
+git commit -m 'comment' - коммитим 
+git push - пушим, oтправка изменений в удаленный репозиторий
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config --list --show-origin
+git show - посмотреть изменения
+git checkout -- <file> - Отмена изменений в файле
+git diff -Чтобы увидеть, что же вы изменили, но пока не проиндексировали
+git diff --staged - Если вы хотите посмотреть, что вы проиндексировали и что войдёт в следующий коммит
+git status -s - Сокращенный вывод статуса
+cat .gitignore - игнорирование файлов
+git commit -a -m 'Add new benchmarks' - коммит с игнорированием индексации
+rm <file> -  удалите файл из своего рабочего каталога
+git rm <file> - Удаление файлов
+git rm log/\*.log - Эта команда удаляет все файлы, имеющие расширение .log и находящиеся в каталоге log/. 
+git rm \*~ - Эта команда удаляет все файлы, имеющие расширение .log
+git mv file_from file_to - переименовать файл в Git
+git commit --amend - отмены сделанных изменений
+git reset HEAD - для исключения из индекса
+git config --list -  проверить используемую конфигурацию
+git restore --staged <file> - отменa индексации файла
+
+
+Log
+git log - посмотреть коммиты
+git log -p -2 -  который показывает разницу (выводит патч), внесенную в каждый коммит. Так же вы можете ограничить количество записей в выводе команды; используйте параметр -2 для вывода только двух записей
+git log --stat - для быстрого просмотра серии внесенных изменений
+git log --relative-date - Отображает дату в относительном формате (например, «2 weeks ago») вместо стандартного формата даты.
+
+Pretty
+git log --pretty=oneline - для просмотра большого количество коммитов
+git log --pretty=format:"%h - %an, %ar : %s" - позволяет указать формат для вывода информации
+https://git-scm.com/book/ru/v2/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git-%D0%9F%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D0%BE%D0%B2
+git log --pretty=format:"%h %s" --graph - показывает текущую ветку и историю слияний
+git log --since=2.weeks  - писок коммитов, сделанных за последние две недели
+
+Удаленные репозитори
+git remote add <shortname> <url> - добавить удаленный репозиторий
+git remote - названия доступных удалённых репозиториев
+git remote -v -  чтобы просмотреть адреса для чтения и записи, привязанные к репозиторию
+git clone - клонирование репозитория
+git remote rename pb paul - переименование репозитория
+git remote remove <shortname> - удаление репозитория 
+
+
+Tэги
+git tag -a v1.4 -m "my version 1.4" - создание тэга
+git tag - просмотр тэга
+git tag -l "v1.8.5*" - просмотр определенных тэгов
+git show v1.4 - посмотреть данные вместе с коммитом
+git tag -d v1.4 - удалить тэг
+git push origin :refs/tags/v1.4 - изъятия тега из внешнего репозитория
+
+Псевдонимы
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+
+Что бы выйти из команды нужно нажать Q
+
+
+Уточнить git checkout -- <file> - Отмена изменений в файле
+git push origin :refs/tags/v1.4-lw
+
+
+
