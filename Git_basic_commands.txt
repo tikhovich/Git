@@ -25,6 +25,7 @@ git commit --amend - отмены сделанных изменений
 git reset HEAD - для исключения из индекса
 git config --list -  проверить используемую конфигурацию
 git restore --staged <file> - отменa индексации файла
+git branch - посмотреть ветку
 
 
 Log
@@ -55,7 +56,7 @@ git tag - просмотр тэга
 git tag -l "v1.8.5*" - просмотр определенных тэгов
 git show v1.4 - посмотреть данные вместе с коммитом
 git tag -d v1.4 - удалить тэг
-git push origin :refs/tags/v1.4 - изъятия тега из внешнего репозитория
+git push origin :refs/tags/v1.4  - изъятия тега из внешнего репозитория
 
 Псевдонимы
 $ git config --global alias.co checkout
@@ -64,7 +65,9 @@ $ git config --global alias.ci commit
 $ git config --global alias.st status
 
 Что бы выйти из команды нужно нажать Q
-
+clear - очистить консоль
+dir - посмотреть какие файлы в папке
+ls- посмотреть папки
 
 Уточнить git checkout -- <file> - Отмена изменений в файле
 git push origin :refs/tags/v1.4-lw
